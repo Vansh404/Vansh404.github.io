@@ -1,30 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vansh Thakur</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header>
-  <section>
-    <h2>About Me</h2>
-    <p>Thriving at the interesection of Control Theory, Machine Learning and Robotics to be a part of the revolution in autonomy!</p>
+    <header>
+        <h1>I am Vansh, and I think robots are pretty cool..</h1>
+        <p>Thriving in the confluence of Machine Leanring, Control Theory and Robotics! Every day is an opportunity to learn more about legged robots!!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Masters in Electrical And Computer Engineering</strong> - University of Michigan, Ann Arbor, August 2024-May 2026
+                <p>Interesting Courses And Labs- Robotic Systems Lab, Emebedded Control, Linear Systems Theory </p>
+            </li>
+            <li>
+                <strong>Bachelors in Electrical Engineering</strong> - National Institute of Technology, Hamirpur, Oct 2020-May 2024
+                <p>Relevant coursework: Digital Electronics, Power Electronics, Signals and Systems, Digital Signal Processing, Microprocessor Architecture and Interfacing, Control Engineering, Linear Algebra</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+          <li>
+              <strong>ROB 550</strong>
+              <ul>
+                  <li>Currenty working on the development of the MBot, a fully autonomous rover.</li>
+                  <li>Part of a graduate design lab focused on ROS2, studied the basics of computer vision applied to robotics, along with rigid body rotations in 3D through homogenous transformations</li>
+                  <li>Studied the pinhole camera model of a camera, implemented intrinisc and extrinsic calibration for world coordinates through Python. </li>
+                  <li>Studied and implemented Forward Kinematics(Denavit-Hartenburg) and Inverse Kinematics(geometric analysis) in Python.</li>
+                  <li>Developed basic motion planning through kinematics to stack and sort a given collection of blocks of varying shapes and colours.</li>
+                  <li>Also did some Cobot modelling with URDF, along with joint visualization in Rviz as a precursor.</li>
+                  
+              </ul>
+          </li>
+
+          <li>
+              <strong>EECS 461</strong>
+              <ul>
+                  <li>Final portions of the lab entails creating an ADAS system.</li>
+                  <li>Performed comprehensive stability and response analysis of standard second order systems in MATLAB and Simulink(modelled after the physical haptic wheel in the lab).</li>
+                  <li>A majority of the programming is bare-metal, in C, on the S32K144, and requires a healthy amount of reading through documentation.</li>
+                  
+                  <li>Implemented virtual springs and walls through C, interfaced with the system through a haptic wheel.</li>
+                  <li>Studied numerical integration(Euler and Runge-Kutta) and impelented Forward Euler in C.</li>
+                  <li>Covered the basics of CAN, ISR's, ADC's and motor encoding.</li>
+                  <li>Side Note-My lab team holds the record for the faster ISR(248 ns) in the Fall 2024 term!!</li>
+                  
+              </ul>
+          </li>
+
+          <li>
+            <strong>Movement Detection With Portable Deep Learning</strong>
+            <ul>
+                <li>Trained a neural network(Sequential with Adam) to detect and classify directional motion.</li>
+                <li>Recorded data using the IMU of an Arduino Nano 33 BLE Sense, and then deployed the model on the same Arduino</li>
+                <li>Performed feature extraction(FFT and PSD) to better prepare IMU data for the model.</li>
+                <li>The entire machine learning pipeline was implemented with the help of EdgeImpulse</li>
+                
+                
+            </ul>
+          </li>
+        
+
+
+          <li>
+              <strong>Snake RL</strong>
+              <ul>
+                  <li>Used a feedforward neural network in PyTorch with three hidden layers as a part of the DQN.</li>
+                  <li>Interfaced with Snake GUI through Python to read 11 states of the snake, and then choosing an action through decaying epsilon greedy algorithm.</li>
+                  
+                  <li><a href="https://github.com/Vansh404/Snake-AI">View Project</a></li>
+              </ul>
+          </li>
+
+          <li>
+            <strong>Image Compression With K-Means</strong>
+            <ul>
+                <li>Utilized K-Means, an unsupervised learning algorithm, to create organized clusters from unlabeled data by identifying centroids for pixel colors in an image.</li>
+                <li> Leveraged MATLAB's capability to load PNG and JPG images as matrices representing RGB concentrations pixel-wise, treating each pixel as an unlabeled data point.</li>
+                <li>Configured the parameter K to reduce the number of colors in the image to 16, enhancing representation efficiency by clustering similar pixel colors into defined groups. </li>
+                <li>Initialized centroids multiple times to avoid poor local minima, computed effective clusters, and used the resulting 16 colors to recreate the original image with reduced color complexity.</li>
+                
+                
+            </ul>
+        </li>
+
+          <li>
+            <strong>Autonomous Path Planning</strong>
+            <ul>
+                <li>Used Temporal Difference and Q-Learning Control to navigate a mobile agent through a 2D obstacle course.</li>
+                
+                
+                <li><a href="https://github.com/Vansh404/PathPlanning_withRL">View Project</a></li>
+            </ul>
+        </li>
+      </ul>
   </section>
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/your-project-link">ROB-550</a></li>
-      <li><a href="https://github.com/your-project-link">EECS-461</a></li>
-       <li><a href="https://github.com/your-project-link">Snake RL</a></li>
-      <!-- Add more projects here -->
-    </ul>
-  </section>
-  <footer>
-    <p>Contact: <a href="mailto:youremail@example.com">vansht@umich.edu</a></p>
-  </footer>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Control Theory</li>
+            <li>Robotics</li>
+            <li>Embedded Systems Development</li>
+            <li>C++, Python</li>
+            <li>MATLAB, Simulink</li>
+            <li>Deep Learning and AI</li>
+            <li>CAD Software (SolidWorks)</li>
+            <li>Modeling and Simulation</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <strong>Research Intern</strong> - ISRO Contract, University Name, Year
+                <p>Contributed to the development of a control system for a UAV-UGV prototype, collaborating with CAD engineers for design accuracy.</p>
+            </li>
+            <li>
+                <strong>Intern</strong> - SDFCL at IIT Kanpur, Year
+                <p>Led the electronic control system design for a hybrid robot, successfully delivering a working prototype under a tight deadline.</p>
+            </li>
+            <li>
+                <strong>Embedded Software Developer</strong> - IIT Mandi, Year
+                <p>Developed software for a sensor network aimed at medical alarms, focusing on data collection speed and error minimization.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
 </body>
 </html>
