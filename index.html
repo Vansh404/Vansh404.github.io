@@ -15,9 +15,10 @@
     <nav>
         <ul>
             <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            
+            
         </ul>
     </nav>
 
@@ -31,6 +32,49 @@
             <li>
                 <strong>Bachelors in Electrical Engineering</strong> - National Institute of Technology, Hamirpur, Oct 2020-May 2024
                 <p>Relevant coursework: Digital Electronics, Power Electronics, Signals and Systems, Digital Signal Processing, Microprocessor Architecture and Interfacing, Control Engineering, Linear Algebra</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Academic Experience</h2>
+        <ul>
+            <li>
+                <strong>Undergraduate Capstone/Major Research Project</strong> National Institute of Technology, Hamirpur-(Aug 2023-Apr 2024) and (Jan 2023-Apr 2023)
+                <ul>
+                    <li><b>Focused on modeling and control of dynamic systems, emphasizing mathematical modeling and stable control implementation.</b></li>
+                    <li>As part of a pre-cursor to the project, I worked on the analysis and development of model predictive control, primarily implementing MPC for a spring damper in C++</li>
+                    <li>Also, worked on data driven MPC, particularly looking at Gaussian Processes for system identification. </li>
+                    <li>Implemented comprehnsive non-linear dynamics via Newton-Euler formulation of a quadcopter, in Python and MATLAB.</li>
+                    <li>Implemented classic LQR control for a trajectory tracking problem, later augmented this with MRAC to handle model uncertainties for multiple systems in parallel. <a href="https://drive.google.com/file/d/1kRxvacHBiwlDzPiUx6jE663Fi3KHsDIB/view?usp=sharing">View Paper</a></li>
+                    <li>Investigated various forms of Deep MPC, eventually implementing a tube-based approach in MATLAB, named Tube MPC.</li>
+                    <li>Applied online deep learning to this appraoch with the help of Radial Basis Function networks.</li>
+                    <li>Perfromed comprehensive testing in simulation against a host of model uncertainties. <a href="https://drive.google.com/file/d/1kWy6eVL8cjgH0lkG9lznb3_hms-EMkYe/view?usp=sharing">View Report</a></li>
+                    <li><a href="https://github.com/Vansh404/EE-419-Major-Project.git">GitHub</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Research Intern</strong> - IIT Kanpur-(May 2023-Aug 2023)
+                
+                <ul>
+                    <li><b>Developed a new hybrid UAV-UGV prototype under limited budget constraints, focusing on differential drive modeling and brainstorming control strategies.</b></li>
+                    <li>Deployed flight control software in C++ using Ardupilot on a PixHawk for drone operations and attempted to use it for rover operations, encountering switching issues.</li>
+                    <li>Tested BLDC motors and implemented a method to switch control between drone and rover by using a user-commanded switch, eliminating the need for relays and multiplexing hardware. </li>
+                    <li>Wrote Arduino code to map incoming commands to differential drive commands for the rover, and a Python script to disarm drone motors and activate rover controls on command.</li>
+                    <li>Conducted system tests to ensure everything worked, explored Kalman filtering and motion planning techniques, and passed the project to an incoming PhD student. </li>
+                    
+                </ul>
+            </li>
+            <li>
+                <strong>Project Intern</strong> - IIT Mandi-(December 2022)
+                <ul>
+                    <li><b>Developed an embedded framework for sensory data collection in a medical alarm system</b></li>
+                    <li>Implemented software to collect and process IMU data, ensuring seamless integration of the embedded system with the rest of the medical alarm.</li>
+                    <li>Set up wireless communication using BLE (Bluetooth Low Energy) to transmit the data from the Arduino Nano 33s to a Raspberry Pi 4, which I configured for data reception in C++. </li>
+                    <li>Experimented with introducing an ESP32 as an intermediary between the Arduino and Raspberry Pi to ensure reliable data transmission and prevent data loss.</li>
+                    
+                    
+                </ul>
             </li>
         </ul>
     </section>
@@ -56,7 +100,7 @@
               <ul>
                   <li>Final portions of the lab entails creating an ADAS system.</li>
                   <li>Performed comprehensive stability and response analysis of standard second order systems in MATLAB and Simulink(modelled after the physical haptic wheel in the lab).</li>
-                  <li>A majority of the programming is bare-metal, in C, on the S32K144, and requires a healthy amount of reading through documentation.</li>
+                  <li>A majority of the programming is bare-metal, in C, on the NXP S32K144.</li>
                   
                   <li>Implemented virtual springs and walls through C, interfaced with the system through a haptic wheel.</li>
                   <li>Studied numerical integration(Euler and Runge-Kutta) and impelented Forward Euler in C.</li>
@@ -114,40 +158,12 @@
       </ul>
   </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Control Theory</li>
-            <li>Robotics</li>
-            <li>Embedded Systems Development</li>
-            <li>C++, Python</li>
-            <li>MATLAB, Simulink</li>
-            <li>Deep Learning and AI</li>
-            <li>CAD Software (SolidWorks)</li>
-            <li>Modeling and Simulation</li>
-        </ul>
-    </section>
+    
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <strong>Research Intern</strong> - ISRO Contract, University Name, Year
-                <p>Contributed to the development of a control system for a UAV-UGV prototype, collaborating with CAD engineers for design accuracy.</p>
-            </li>
-            <li>
-                <strong>Intern</strong> - SDFCL at IIT Kanpur, Year
-                <p>Led the electronic control system design for a hybrid robot, successfully delivering a working prototype under a tight deadline.</p>
-            </li>
-            <li>
-                <strong>Embedded Software Developer</strong> - IIT Mandi, Year
-                <p>Developed software for a sensor network aimed at medical alarms, focusing on data collection speed and error minimization.</p>
-            </li>
-        </ul>
-    </section>
+    
 
     <footer>
-        <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p>Contact: <a href="mailto:youremail@example.com">vansht@umich.edu</a></p>
     </footer>
 </body>
 </html>
