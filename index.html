@@ -1,198 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vansh Thakur Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Vansh</h1>
-        <p>Bridging Robotics, Data-Driven Control, and ML</p>
-    </header>
+  <header>
+    <h1>Vansh Thakur</h1>
+    <p>Data-Driven Control, Optimization and Robotics</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            
-            
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>Masters in Electrical And Computer Engineering</strong> - University of Michigan, Ann Arbor, August 2024-May 2026
-                <p> Courses And Labs- Robotic Systems Lab, Emebedded Control, Linear Systems Theory </p>
-            </li>
-            <li>
-                <strong>Bachelors in Electrical Engineering</strong> - National Institute of Technology, Hamirpur, Oct 2020-May 2024
-                <p>Relevant coursework: Digital Electronics, Power Electronics, Signals and Systems, Digital Signal Processing, Microprocessor Architecture and Interfacing, Control Engineering, Linear Algebra</p>
-            </li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>
-                <strong>Navigation And Sensors Subteam Member</strong> - University of Michigan Autonomous Robotic Vehicle
-                
-                <ul>
-                    <li><b>Part of the ARV team developing the planning and sensing stack for our in-house autonomous vehicle </b></li>
-                    <li>Currently looking into wheel odometry, postional tracking and optimal goal estimation for the robot.</li>
-                    
-                    
-                </ul>
-            </li>
-            <li>
-                <strong>Undergraduate Capstone/Major Research Project</strong> National Institute of Technology, Hamirpur-(Aug 2023-Apr 2024) and (Jan 2023-Apr 2023)
-                <ul>
-                    <li><b>Focused on modeling and control of dynamic systems, emphasizing mathematical modeling and stable control implementation using data-driven methodologies.</b></li>
-                    <li>As part of a pre-cursor to the project, I worked on the analysis and development of model predictive control, primarily implementing MPC for a spring damper in C++</li>
-                    <li>Also, worked on data driven MPC, particularly looking at Gaussian Processes for system identification. </li>
-                    <li>Implemented comprehnsive non-linear dynamics via Newton-Euler formulation of a quadcopter, in Python and MATLAB.</li>
-                    <li>Implemented classic LQR control for a trajectory tracking problem, later augmented this with MRAC to handle model uncertainties for multiple systems in parallel. <a href="https://drive.google.com/file/d/1kRxvacHBiwlDzPiUx6jE663Fi3KHsDIB/view?usp=sharing">View Paper</a></li>
-                    <li>Investigated various forms of Deep MPC, eventually implementing a tube-based approach in MATLAB, named Tube MPC.</li>
-                    <li>Applied online deep learning to this approach with the help of Radial Basis Function networks.</li>
-                    <li>Perfromed comprehensive testing in simulation against a host of model uncertainties. <a href="https://drive.google.com/file/d/1kWy6eVL8cjgH0lkG9lznb3_hms-EMkYe/view?usp=sharing">View Report</a></li>
-                    <li><a href="https://github.com/Vansh404/EE-419-Major-Project.git">GitHub</a></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Research Intern</strong> - IIT Kanpur-(May 2023-Aug 2023)
-                
-                <ul>
-                    <li><b>Developed a new hybrid UAV-UGV prototype under limited budget constraints, focusing on differential drive modeling and brainstorming control strategies.</b></li>
-                    <li>Deployed flight control software in C++ using Ardupilot on a PixHawk for drone operations and attempted to use it for rover operations, encountering switching issues.</li>
-                    <li>Tested BLDC motors and implemented a method to switch control between drone and rover by using a user-commanded switch, eliminating the need for relays and multiplexing hardware. </li>
-                    <li>Wrote Arduino code to map incoming commands to differential drive commands for the rover, and a Python script to disarm drone motors and activate rover controls on command.</li>
-                    <li>Conducted system tests to ensure everything worked, explored Kalman filtering and motion planning techniques, and passed the project to an incoming PhD student. </li>
-                    
-                </ul>
-            </li>
-            <li>
-                <strong>Project Intern</strong> - IIT Mandi-(December 2022)
-                <ul>
-                    <li><b>Developed an embedded framework for sensory data collection in a medical alarm system</b></li>
-                    <li>Implemented software to collect and process IMU data, ensuring seamless integration of the embedded system with the rest of the medical alarm.</li>
-                    <li>Set up wireless communication using BLE (Bluetooth Low Energy) to transmit the data from the Arduino Nano 33s to a Raspberry Pi 4, which I configured for data reception in C++. </li>
-                    <li>Experimented with introducing an ESP32 as an intermediary between the Arduino and Raspberry Pi to ensure reliable data transmission and prevent data loss.</li>
-                    
-                    
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects, Academic and Personal</h2>
-      <ul>
-          <li>
-              <strong>ROB 550</strong>
-              <ul>
-                  <li>Developed the autonomy stack of the MBot(SLAM and Path Planning), a differential drive mobile wheeled robot</li>
-                  <li>Used a RPLidar to create an occupancy grid map of a maze by coding mapping software from scratch in C++.</li>
-                  <li>Implemented Monte Carlo based localization using a particle filter in C++. Utilised basics of mapping and probalbilistic robotics to deveop action and sensing models from the ground up.</li>
-                  <li>Used the A* path planning algorith to succesfully demonstrate a fully autonomous MBot capable moving around a given maze.</li>
-                  <li>Part of a graduate design lab focused on ROS2, studied the basics of computer vision applied to robotics, along with rigid body rotations in 3D through homogenous transformations</li>
-                  <li>Studied the pinhole camera model of a camera, implemented intrinisc and extrinsic calibration for world coordinates through Python. </li>
-                  <li>Studied and implemented Forward Kinematics(Denavit-Hartenburg) and Inverse Kinematics(geometric analysis) in Python.</li>
-                  <li>Developed basic motion planning through kinematics to stack and sort a given collection of blocks of varying shapes and colours.</li>
-                  <li>Also did some Cobot modelling with URDF, along with joint visualization in Rviz as a precursor.</li>
-                  
-              </ul>
-          </li>
-
-          <li>
-              <strong>EECS 461</strong>
-              <ul>
-                  <li>Developed an end-to-end ADAS system featuring automatic cruise control and auto-steering for lane centering by leveraging model based feedback control design in Simulink and C.</li>
-                  <li>Performed comprehensive stability and response analysis of standard second order systems in MATLAB and Simulink(modelled after the physical haptic wheel in the lab).</li>
-                  <li>A majority of the programming is bare-metal, in C, on the NXP S32K144.</li>
-                  
-                  <li>Implemented virtual springs and walls through C, interfaced with the system through a haptic wheel.</li>
-                  <li>Studied numerical integration(Euler and Runge-Kutta) and impelented Forward Euler in C for use in model based control on a standard bicycle model of an automotive system.</li>
-                  <li>The control was put to test on our own Simulink testbed simulation, where we were succesfull in maintaing lain position at speeds of upto 60kmph</li>
-                  <li>Covered the basics of CAN, ISR's, ADC's and motor encoding.</li>
-                  <li>Side Note-My lab team holds the record for the faster ISR(248 ns) in the Fall 2024 term!</li>
-                  
-              </ul>
-          </li>
-
-          <li>
-            <strong>Movement Detection With Portable Deep Learning</strong>
-            <ul>
-                <li>Trained a neural network(Sequential with Adam) to detect and classify directional motion.</li>
-                <li>Recorded data using the IMU of an Arduino Nano 33 BLE Sense, and then deployed the model on the same Arduino</li>
-                <li>Performed feature extraction(FFT and PSD) to better prepare IMU data for the model.</li>
-                <li>The entire machine learning pipeline was implemented with the help of EdgeImpulse</li>
-                
-                
-            </ul>
-          </li>
-        
-
-
-          <li>
-              <strong>Snake AI</strong>
-              <ul>
-                  <li>Used a feedforward neural network in PyTorch with three hidden layers as a part of the DQN.</li>
-                  <li>Interfaced with Snake GUI through Python to read 11 states of the snake, and then choosing an action through decaying epsilon greedy algorithm.</li>
-                  
-                  <li><a href="https://github.com/Vansh404/Snake-AI">View Project</a></li>
-              </ul>
-          </li>
-
-          <li>
-            <strong>Image Compression With K-Means</strong>
-            <ul>
-                <li>Utilized K-Means, an unsupervised learning algorithm, to create organized clusters from unlabeled data by identifying centroids for pixel colors in an image.</li>
-                <li> Leveraged MATLAB's capability to load PNG and JPG images as matrices representing RGB concentrations pixel-wise, treating each pixel as an unlabeled data point.</li>
-                <li>Configured the parameter K to reduce the number of colors in the image to 16, enhancing representation efficiency by clustering similar pixel colors into defined groups. </li>
-                <li>Initialized centroids multiple times to avoid poor local minima, computed effective clusters, and used the resulting 16 colors to recreate the original image with reduced color complexity.</li>
-                
-                
-            </ul>
-        </li>
-
-        <li>
-            <strong>8 Bit CPU</strong>
-            <ul>
-                <li>Developed a basic 8-bit CPU using breadboards and discrete logic ICs, implementing a simple microarchitecture.</li>
-                <li>Designed the system around a single bus for communication, allowing basic instruction fetching from RAM.</li>
-                <li>Implemented core instructions such as loading data into registers, addition, and subtraction operations.</li>
-                <li>Constructed and tested the CPU to execute basic operations, demonstrating functionality and bus coordination.</li>
-                <li>Focused on fundamental microarchitecture principles, ensuring reliable data transfer and processing.</li>
-                
-                
-                
-            </ul>
-        </li>
-        <li>
-            <strong>Autonomous Path Planning with RL</strong>
-            <ul>
-                <li>Used Temporal Difference and Q-Learning Control to navigate a mobile agent through a 2D obstacle course.</li>
-                
-                
-                <li><a href="https://github.com/Vansh404/PathPlanning_withRL">View Project</a></li>
-            </ul>
-        </li>
-
-       
-      </ul>
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <strong>Masters in Electrical And Computer Engineering</strong> - University of Michigan, Ann Arbor, August 2024–May 2026
+        <p>Courses and Labs: Robotic Systems Lab, Embedded Control, Linear Systems Theory</p>
+      </li>
+      <li>
+        <strong>Bachelors in Electrical Engineering</strong> - National Institute of Technology, Hamirpur, Oct 2020–May 2024
+        <p>Relevant coursework: Digital Electronics, Power Electronics, Signals and Systems, DSP, Microprocessor Architecture and Interfacing, Control Engineering, Linear Algebra</p>
+      </li>
+    </ul>
   </section>
 
-    
+  <section id="experience">
+    <h2>Experience</h2>
+    <details open>
+      <summary><strong>Research Intern – ROAHM Lab, University of Michigan (Summer 2025)</strong></summary>
+      <p>Developing a rapid trajectory-optimizer/motion planning  solver for online constrained optimization in high-DoF contact-rich systems.</p>
+      <ul>
+        <li>Built solver from scratch; achieved <b>sub-0.5s solve times</b>, better numerical conditioning, and reduced sensitivity to hyperparameters by rolling out online updates for these parameters.</li>
+        <li>Reduced <b>motor torque usage from 60Nm to 22Nm</b> in a double pendulum while obeying all constraints.</li>
+        <li>Currently scaling implementation from MATLAB to C++ for Kinova arm and potentially Digit humanoid or Unitree Go.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Assistant Researcher – University of Michigan (Jan–Apr 2025)</strong></summary>
+      <ul>
+        <li>Designed <b>dual-layer MPC system</b> for autonomous vehicle simulations in CARLA, replacing unstable PID loops with constrained optimization.</li>
+        <li>System encoded human driving data; achieved <b><64ms rollout</b> and <b>tracking error &lt; 0.3</b>.</li>
+        <li>Integrated Gurobi-based MILP backend and linearized QP solver for real-time control in urban environments.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="projects">
+    <h2>Key Projects</h2>
+
+    <details open>
+      <summary><strong>Multivariable Control for Reactive Ion Etching (Winter 2025)</strong></summary>
+      <p>Final project for a graduate Linear Feedback Control course. Designed optimal multivariable feedback controller to outperform industry-standard SISO loops for UM's 3x3 RIE plasma chamber process.</p>
+      <ul>
+        <li>Used LQR + state integrator + Kalman Filter to meet specs: decoupled transient, zero steady-state error, low-frequency uncertainty rejection.</li>
+        <li>Reduced <b>voltage spikes by 87%</b> (0.6 → 0.078), <b>halved RF power</b>, and sped up convergence (47s → 11s).</li>
+        <li>Process was control redundant — analytically derived limits of SISO strategy and outperformed it using a reduced 2x3 MIMO design.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><strong>Deep Koopman Learning for Chaotic Systems</strong></summary>
+      <p>From a data-driven control course: learned dynamics of the chaotic Lorenz system using neural approximations of the Koopman operator.</p>
+      <ul>
+        <li>Trained deep autoencoder in PyTorch to project 3D → 15D latent space; learned linear Koopman dynamics in latent space.</li>
+        <li>Loss enforced in 3D space for interpretability; achieved <b>testing MSE ≈ 0.4</b> across 60k samples of chaotic evolution.</li>
+        <li>Showcases scalable modeling techniques for control of nonlinear dynamic systems.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><strong>ROB 550: Autonomy Stack for MBot (Fall 2024)</strong></summary>
+      <p>Developed full autonomy stack for a differential-drive mobile robot using ROS2, SLAM, localization, and motion planning.</p>
+      <ul>
+        <li>Created <strong>occupancy grid mapping</strong> from scratch using RPLidar data in C++.</li>
+        <li>Implemented <strong>Monte Carlo Localization</strong> with particle filters and hand-coded motion/sensor models.</li>
+        <li>Used <strong>A* path planning</strong> to successfully achieve autonomous maze navigation.</li>
+        <li>Performed <strong>intrinsic/extrinsic camera calibration</strong> using pinhole model in Python.</li>
+        <li>Executed <strong>forward/inverse kinematics</strong> for pick-and-place tasks; modeled Cobot using URDF with RViz joint visualization.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>EECS 461: Embedded ADAS System on NXP S32K144</strong></summary>
+      <p>Designed and programmed a complete ADAS (Advanced Driver Assistance System) stack featuring cruise control and lane keeping, using model-based design and embedded C.</p>
+      <ul>
+        <li>Built <strong>Simulink+C implementation</strong> of automatic cruise and lane centering on a physical testbed with a haptic steering wheel.</li>
+        <li>Performed stability/response analysis using MATLAB, and programmed control logic <strong>bare-metal in C</strong>.</li>
+        <li>Used <strong>Forward Euler integration</strong> to simulate bicycle model dynamics.</li>
+        <li>Implemented virtual force feedback (springs, walls) via direct control of haptic motors.</li>
+        <li>Worked extensively with <strong>CAN, ISRs, ADCs, and motor encoders</strong>.</li>
+        <li>Our team set the lab record for the <strong>fastest ISR: 248ns</strong> (Fall 2024).</li>
+      </ul>
+    </details>
 
     
+<!-- 
+    <details>
+      <summary><strong>8-bit CPU from Scratch</strong></summary>
+      <p>Designed and built a basic 8-bit CPU using discrete logic ICs and breadboards, with full data bus, instruction decoding, and ALU.</p>
+      <ul>
+        <li>Successfully implemented register transfer, arithmetic operations, and a control clock for sequential instruction handling.</li>
+        <li>Debugged register and bus logic extensively; final prototype handled addition, subtraction, and load/store from memory.</li>
+      </ul>
+    </details>
+  </section> -->
 
-    <footer>
-        <p>Contact: <a href="mailto:youremail@example.com">vansht@umich.edu</a></p>
-    </footer>
+  <footer>
+    <p>Contact: <a href="mailto:vansht@umich.edu">vansht@umich.edu</a> | <a href="https://github.com/Vansh404">GitHub</a></p>
+  </footer>
 </body>
 </html>
