@@ -38,15 +38,13 @@
     <h2>Experience</h2>
     <details open>
       <summary><strong>Graduate Researcher – ROAHM Lab, University of Michigan (May 2025-Present)</strong></summary>
-      <p>Developing a rapid trajectory-optimizer/motion planning  solver for online constrained optimization in high-DoF contact-rich systems.</p>
+      <p>Developing a rapid trajectory optimization solver for online constrained motion planning in high-DoF contact-rich systems. Built from scratch, the solver achieves faster solve times with improved numerical conditioning and reduced sensitivity to hyperparameters through online parameter updates. On a double pendulum benchmark, it reduced motor torque usage from 60Nm to 22Nm while satisfying all constraints. Scaled the implementation from MATLAB to C++ for deployment on a Kinova Gen3 7-DoF manipulator, with plans to extend to the Unitree Go quadruped. Ongoing work focuses on improving dynamic feasibility and execution speed.</p>
       <video class="project-video" controls>
         <source src="fire.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <ul>
-        <li>Built solver from scratch; achieved <b>sub-0.5s solve times</b>, better numerical conditioning, and reduced sensitivity to hyperparameters by rolling out online updates for these parameters.</li>
-        <li>Reduced <b>motor torque usage from 60Nm to 22Nm</b> in a double pendulum while obeying all constraints.</li>
-        <li>Currently scaling implementation from MATLAB to C++ for Kinova arm and potentially Digit humanoid or Unitree Go.</li>
+        
       </ul>
     </details>
 
@@ -55,7 +53,7 @@
       <ul>
         <li>Designed <b>dual-layer MPC system</b> for autonomous vehicle simulations in CARLA, replacing unstable PID loops with constrained optimization.</li>
         <li>System encoded human driving data; achieved <b><64ms rollout</b> and <b>tracking error &lt; 0.3</b>.</li>
-        <li>Integrated Gurobi-based MILP backend and linearized QP solver for real-time control in urban environments.</li>
+        <li>Integrated Gurobi-based MILP backend and linearized QP solver for real-time control in urban environments.<a href="https://docs.google.com/presentation/d/18hjz8URtOQ8X7RgI-8fH5L7xRgqbPQmJxaG6vJjWJz4/edit?usp=sharing">Final Presentation</a></li>
       </ul>
     </details>
 
