@@ -37,8 +37,12 @@
   <section id="experience">
     <h2>Experience</h2>
     <details open>
-      <summary><strong>Research Intern – ROAHM Lab, University of Michigan (Summer 2025)</strong></summary>
+      <summary><strong>Graduate Researcher – ROAHM Lab, University of Michigan (May 2025-Present)</strong></summary>
       <p>Developing a rapid trajectory-optimizer/motion planning  solver for online constrained optimization in high-DoF contact-rich systems.</p>
+      <video class="project-video" controls>
+        <source src="fire.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <ul>
         <li>Built solver from scratch; achieved <b>sub-0.5s solve times</b>, better numerical conditioning, and reduced sensitivity to hyperparameters by rolling out online updates for these parameters.</li>
         <li>Reduced <b>motor torque usage from 60Nm to 22Nm</b> in a double pendulum while obeying all constraints.</li>
@@ -77,7 +81,7 @@
       <ul>
         <li>Used LQR + state integrator + Kalman Filter to meet specs: decoupled transient, zero steady-state error, low-frequency uncertainty rejection.</li>
         <li>Reduced <b>voltage spikes by 87%</b> (0.6 → 0.078), <b>halved RF power</b>, and sped up convergence (47s → 11s).</li>
-        <li>Process was control redundant — analytically derived limits of SISO strategy and outperformed it using a reduced 2x3 MIMO design.</li>
+        <li>Process was control redundant — analytically derived limits of SISO strategy and outperformed it using a reduced 2x3 MIMO design.<a href="https://github.com/Vansh404/565_FinalProj.git">GitHub</a></li>
       </ul>
     </details>
     <details>
@@ -85,7 +89,7 @@
       <p>From a data-driven control course: learned dynamics of the chaotic Lorenz system using neural approximations of the Koopman operator.</p>
       <ul>
         <li>Trained deep autoencoder in PyTorch to project 3D → 15D latent space; learned linear Koopman dynamics in latent space.</li>
-        <li>Loss enforced in 3D space for interpretability; achieved <b>testing MSE ≈ 0.4</b> across 60k samples of chaotic evolution. <a href="https://github.com/Vansh404/EE-419-Major-Project.git">GitHub</a></li>
+        <li>Loss enforced in 3D space for interpretability; achieved <b>testing MSE ≈ 0.4</b> across 60k samples of chaotic evolution. </li>
         
       </ul>
     </details>
