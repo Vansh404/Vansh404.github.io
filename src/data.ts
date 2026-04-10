@@ -49,10 +49,8 @@ export const projectsLists: ProjectsList[] = [
       info: 'ROAHM Lab, University of Michigan — May 2025–Present',
       description:
         'Developed a real-time trajectory optimization system for constrained robotic motion in C++, achieving reliable online planning with strict constraint satisfaction. ' +
-        'Deployed on a 7-DoF manipulator with 100% success rate and extended to quadrupeds, leading to an optimization-based whole-body controller for robust contact and stability. ' +
-        'Scaled from MATLAB to C++ for deployment on a Kinova Gen3 7-DoF manipulator, with plans to extend to the Unitree Go quadruped.',
-      link: '',
-      disabled: true,
+        'Deployed on a 7-DoF manipulator with 100% success rate and extended to quadrupeds, leading to an optimization-based whole-body controller for robust contact and stability. ',
+      link: 'https://vansh404.github.io/ALMSite/',
     },
     {
       media: [
