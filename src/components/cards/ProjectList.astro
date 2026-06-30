@@ -2,22 +2,23 @@
 import type { ProjectsList as Props} from '@/types'
 import ProjectCard from './ProjectCard.astro'
 
-const {title, items} = Astro.props
+const {title, items, grid} = Astro.props
+const containerCls = grid ? 'grid grid-cols-1 md:grid-cols-2 gap-6 items-start' : 'space-y-6'
 ---
 
 <h2 class='text-3xl font-bold mb-6'>{title}</h2>
-<div class='space-y-6'>
+<div class={containerCls}>
   {items.map(item => (
     item.hide ? // Hide if requested
     null
     : (
       item.disabled ?
       <div class='flex flex-col rounded-lg bg-base-200'>
-        <ProjectCard item={item} />
+        <ProjectCard item={item} grid={grid} />
       </div>
       :
       <a href={item.link} class='flex flex-col rounded-lg bg-base-200 transition-brightness duration-150 hover:shadow-lg hover:brightness-90' target="_blank">
-        <ProjectCard item={item} />
+        <ProjectCard item={item} grid={grid} />
       </a>
     )
   ))}

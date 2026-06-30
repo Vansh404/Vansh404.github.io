@@ -29,11 +29,28 @@ export const socials: Socials[] = [
 
 //// This is the data for the research works
 import { type ResearchInfo } from '@/types';
+import meccImage from '@/assets/image.png';
 
-export const research: ResearchInfo[] = [];
+export const research: ResearchInfo[] = [
+  {
+    image: meccImage,
+    title: 'Multiplier-Augmented Geometric Motion Algorithm',
+    authors: [
+      'Ramos Chuquiure, C. E.',
+      'Thakur, V.',
+      'Adu, C. E.',
+      'Vasudevan, R.',
+    ],
+    journal: 'Modeling, Estimation and Control Conference (MECC)',
+    time: '2026',
+    link: '',
+    disabled: true,
+  },
+];
 
 //// This is the data for the projects
 import { type ProjectsList } from '@/types';
+import hiqlImage from '@/assets/hiql.png';
 
 export const projectsLists: ProjectsList[] = [
   {
@@ -44,12 +61,18 @@ export const projectsLists: ProjectsList[] = [
         { type: 'video', src: '/fire.mp4' },
         { type: 'video', src: '/demo2.mp4' },
         { type: 'video', src: '/solution.mov' },
+        { type: 'video', src: '/shittyhop.mp4' }
+      ],
+      extraMedia: [
+        { type: 'video', src: '/swarm_model_1499.mp4' },
+        { type: 'video', src: '/rl-video-step-34000.mp4' },
       ],
       title: 'Rapid Trajectory Optimization for High DoF Systems',
       info: 'ROAHM Lab, University of Michigan — May 2025–Present',
       description:
         'Developed a real-time trajectory optimization system for constrained robotic motion in C++, achieving reliable online planning with strict constraint satisfaction. ' +
-        'Deployed on a 7-DoF manipulator with 100% success rate and extended to quadrupeds, leading to an optimization-based whole-body controller for robust contact and stability. ',
+        'Deployed on a 7-DoF manipulator with 100% success rate and extended to quadrupeds, leading to an optimization-based whole-body controller for robust contact and stability. ' +
+        'Also working on reinforcement learning for high-DoF control, training massively parallelized policies and validating learned behaviors through evaluation rollouts. ',
       link: 'https://vansh404.github.io/ALMSite/',
     },
     {
@@ -75,8 +98,19 @@ export const projectsLists: ProjectsList[] = [
     },
   ]},
   {
-    title: 'Course Projects',
+    title: 'Select Projects',
+    grid: true,
     items: [
+    {
+      image: hiqlImage,
+      title: 'EX-HIQL',
+      description:
+        'Implemented and analyzed EX-HIQL, identifying the root cause of a 40-point performance collapse in HIQL on stochastic offline GCRL as expectile-regression overestimation at stochastic transitions and a σV–V anti-correlation (r = −0.44). ' +
+        'Introduced a per-head τ-vector expectile formulation—a single-tensor modification to the value loss—that preserves ensemble agreement at deterministic transitions while inducing principled disagreement at stochastic ones, ' +
+        'yielding a +2.5-point success improvement over HIQL across three seeds and validating the mechanism through residual-σ analysis (1.66× near/far σ ratio, −0.36 distance correlation).',
+      link: '',
+      disabled: true,
+    },
     {
       media: [
         { type: 'image-url', src: '/finalTrack.png' },

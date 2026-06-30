@@ -18,14 +18,14 @@ const { name } = coreSettings
 
   {research.length > 0 && (
   <section class='py-8 border-b'>
-    <ArticleList listTitle='Research Work' listItems={research} />
+    <ArticleList listTitle='Publications' listItems={research} />
   </section>
   )}
 
   {projectsLists.map(projectsList => (
     projectsList.items.length > 0 && !projectsList.disabled &&
     <section class='py-8 border-b'>
-      <ProjectList title={projectsList.title} items={projectsList.items}/>
+      <ProjectList title={projectsList.title} items={projectsList.items} grid={projectsList.grid}/>
     </section>
   ))}
 </Layout>

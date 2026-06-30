@@ -4,11 +4,13 @@ import { type ProjectInfo } from '@/types';
 
 interface Props {
   item: ProjectInfo;
+  grid?: boolean;
 }
-const { item } = Astro.props
+const { item, grid = false } = Astro.props
 
 const mediaCount = item.media?.length ?? (item.image ? 1 : 0);
-const sideLayout = mediaCount === 1;
+// In grid mode columns are narrow, so always stack media on top instead of beside the text.
+const sideLayout = mediaCount === 1 && !grid;
 
 const mediaCls = 'w-full object-cover rounded-lg';
 ---
@@ -39,10 +41,36 @@ const mediaCls = 'w-full object-cover rounded-lg';
     </div>
   </div>
 ) : (
-  <!-- Multiple media: grid above text -->
+  <!-- Multiple media (or stacked grid card): media above text -->
+  {(!item.media || item.media.length === 0) && item.image && (
+    <div class='w-full p-4 pb-0'>
+      {!item.dontOptimizeImage ? (
+        <Image src={item.image} alt={item.title} class={mediaCls} />
+      ) : (
+        <img src={item.image.src} height={item.image.height} width={item.image.width} alt={item.title} class={mediaCls} />
+      )}
+    </div>
+  )}
   {item.media && item.media.length > 0 && (
-    <div class={`w-full p-4 pb-0 gap-3 grid ${mediaCount === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+    <div class={`w-full p-4 pb-0 gap-3 grid ${mediaCount === 1 ? 'grid-cols-1' : mediaCount === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
       {item.media.map(m => (
+        m.type === 'video' ? (
+          <video autoplay loop muted playsinline preload="metadata" class={`${mediaCls} max-h-64`}>
+            <source src={m.src} />
+          </video>
+        ) : m.type === 'image-url' ? (
+          <img src={m.src} alt={item.title} class={`${mediaCls} max-h-64`} />
+        ) : m.optimize !== false ? (
+          <Image src={m.src} alt={item.title} class={`${mediaCls} max-h-64`} />
+        ) : (
+          <img src={m.src.src} height={m.src.height} width={m.src.width} alt={item.title} class={`${mediaCls} max-h-64`} />
+        )
+      ))}
+    </div>
+  )}
+  {item.extraMedia && item.extraMedia.length > 0 && (
+    <div class={`w-full p-4 pb-0 gap-3 grid ${item.extraMedia.length === 1 ? 'grid-cols-1' : item.extraMedia.length === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+      {item.extraMedia.map(m => (
         m.type === 'video' ? (
           <video autoplay loop muted playsinline preload="metadata" class={`${mediaCls} max-h-64`}>
             <source src={m.src} />
