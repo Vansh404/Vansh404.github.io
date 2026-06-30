@@ -43,8 +43,7 @@ export const research: ResearchInfo[] = [
     ],
     journal: 'Modeling, Estimation and Control Conference (MECC)',
     time: '2026',
-    link: '',
-    disabled: true,
+    link: 'https://vansh404.github.io/ALMSite/',
   },
 ];
 
@@ -67,13 +66,14 @@ export const projectsLists: ProjectsList[] = [
         { type: 'video', src: '/swarm_model_1499.mp4' },
         { type: 'video', src: '/rl-video-step-34000.mp4' },
       ],
-      title: 'Rapid Trajectory Optimization for High DoF Systems',
+      title: 'Rapid Motion Planning, Robust Whole Body Control, and Learned Policies for High DoF Systems',
       info: 'ROAHM Lab, University of Michigan — May 2025–Present',
       description:
         'Developed a real-time trajectory optimization system for constrained robotic motion in C++, achieving reliable online planning with strict constraint satisfaction. ' +
         'Deployed on a 7-DoF manipulator with 100% success rate and extended to quadrupeds, leading to an optimization-based whole-body controller for robust contact and stability. ' +
         'Also working on reinforcement learning for high-DoF control, training massively parallelized policies and validating learned behaviors through evaluation rollouts. ',
-      link: 'https://vansh404.github.io/ALMSite/',
+      link: '',
+      disabled: true,
     },
     {
       media: [
